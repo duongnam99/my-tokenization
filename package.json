@@ -1,5 +1,5 @@
 {
-  "name": "tokenization",
+  "name": "my-tokenization",
   "version": "1.0.0",
   "description": "",
   "main": "truffle-config.js",
@@ -9,8 +9,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duongnam99/my-tokenization.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duongnam99/my-tokenization/issues"
+  },
+  "homepage": "https://github.com/duongnam99/my-tokenization#readme",
   "dependencies": {
     "@openzeppelin/contracts": "^4.5.0",
     "chai": "^4.3.6",
