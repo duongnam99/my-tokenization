@@ -1,11 +1,11 @@
 # Setup
 
-Run the following commands to migrate contract from solidity
+Run the following commands to migrate contract from solidity:
 - npm install
-- trufle init
-- trufle migrate
+- truffle init
+- truffle migrate
 
-Then, run the application
+Then, run the application:
 - cd client
 - npm start
 
