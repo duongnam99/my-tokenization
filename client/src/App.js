@@ -52,26 +52,25 @@ class App extends Component {
     const value = target.type === "checkbox" ? target.checked : target.value;
     const name = target.name;
     this.setState({
-    [name]: value
+      [name]: value
     });
   }
 
   handleKycSubmit = async () => {
     const {kycAddress} = this.state;
-    await this.kycContract.methods.setKycCompleted(kycAddress).send({from: this.accounts[0
-    ]});
+    await this.kycContract.methods.setKycCompleted(kycAddress).send({from: this.accounts[0]});
     alert("Account "+kycAddress+" is now whitelisted");
   }
   
   handleBuyToken = async () => {
-    await this.myTokenSale.methods.buyTokens(this.accounts[0]).send({from: this.accounts[0]
-    , value: 1});
+    await this.myTokenSale.methods.buyTokens(this.accounts[0]).send({from: this.accounts[0], value: 1});
   }
 
   updateUserTokens = async() => {
     let userTokens = await this.myToken.methods.balanceOf(this.accounts[0]).call();
     this.setState({userTokens: userTokens});
   }
+
   listenToTokenTransfer = async() => {
     this.myToken.events.Transfer({to: this.accounts[0]}).on("data", this.updateUserTokens);
   }

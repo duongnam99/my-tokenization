@@ -1,7 +1,7 @@
 const path = require("path");
 require('dotenv').config({path: './.env'});
 const HDWalletProvider = require("@truffle/hdwallet-provider");
-const MetaMaskAccountIndex = 0;
+const MetaMaskAccountIndex = 0; // deploy contract with the first account in the metamask
 
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
@@ -22,7 +22,7 @@ module.exports = {
   },
   compilers: {
     solc: {
-    version: "0.8.12"
+      version: "0.8.12"
     }
-    }
+  }
 };
